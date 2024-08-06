@@ -1,0 +1,19 @@
+.emptyMessageMain {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-wrap: pretty;
+    min-width: 330px;
+
+    & img {
+        width: 70%;
+        max-width: 300px;
+        mask-image: linear-gradient(black 70%, transparent);
+        filter: brightness(120%);
+        filter: contrast(120%);
+        filter: grayscale(130%);
+    }
+}

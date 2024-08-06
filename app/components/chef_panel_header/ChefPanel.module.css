@@ -1,0 +1,10 @@
+.chefPanelMain {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 60px;
+    }
+}

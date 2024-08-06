@@ -1,0 +1,31 @@
+.ingredientGroup {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 8px;
+    border: 1px solid white;
+    border-radius: 5px;
+    max-height: 188px;
+    min-height: 80px;
+    justify-content: center;
+    justify-items: center;
+
+    padding: 8px 15px 15px 15px;
+
+    & legend {
+        text-transform: capitalize;
+        padding: 0 10px;
+        letter-spacing: 0.4rem;
+    }
+
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+}
+
+@media (width < 940px) {
+
+}

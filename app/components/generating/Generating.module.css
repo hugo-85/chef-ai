@@ -1,0 +1,15 @@
+.generatingMain {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+        -webkit-text-fill-color: #ffff;
+        -webkit-text-stroke: 3px #ffff;
+        fill: #ffff;
+        letter-spacing: 0.5rem;
+        cursor: pointer;
+    }
+}

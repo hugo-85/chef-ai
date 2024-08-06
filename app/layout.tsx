@@ -1,11 +1,13 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
+import "./globals.css";
+import { Inter } from "next/font/google";
+import { ChefStoreProvider } from "./providers/chef-store-provider";
+import { Head } from "next/document";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Vercel AI SDK - Next.js OpenAI Examples',
-  description: 'Examples of using the Vercel AI SDK with Next.js and OpenAI.',
+  title: "Chef AI",
+  description: "Generate recipes with artificial intelligence",
 };
 
 export default function RootLayout({
@@ -15,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="icon"
+          href="/chef-hat.png"
+          sizes="128x128"
+          type="image/png"
+        />
+      </head>
+      <body className={inter.className}>
+        <ChefStoreProvider>{children}</ChefStoreProvider>
+      </body>
     </html>
   );
 }

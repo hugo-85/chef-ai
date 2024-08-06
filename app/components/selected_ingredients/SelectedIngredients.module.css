@@ -1,0 +1,19 @@
+.selectedIngredientsMain {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 8px;
+    border: 1px solid white;
+    border-radius: 5px;
+    min-height: 80px;
+    overflow-y: auto;
+    justify-content: center;
+    
+
+    padding: 8px 15px 15px 15px;
+
+    & legend {
+        text-transform: capitalize;
+        padding: 0 10px;
+        letter-spacing: 0.5rem;
+    }
+}

@@ -1,0 +1,95 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.chefPanel {
+    flex: 1;
+    min-width: 330px;
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.ingredient {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+
+    /* border: 1px solid white; */
+    background-color: #393838;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #393838;
+        scale: 1.1;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+
+    & button:nth-child(2) {
+        flex: 1;
+    }
+}
+
+.button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    justify-self: end;
+    background: #dbdbdb;
+    -webkit-text-fill-color: #171717;
+    -webkit-text-stroke: 3px #171717;
+    fill: #171717;
+    letter-spacing: 0.5rem;
+    cursor: pointer; 
+    font-size: 1.2rem;
+
+    &:not([disabled]):hover {
+        scale: 1.02;
+        translate: 0 -5px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    &:is([disabled]) {
+        background: #9a9898;
+        -webkit-text-fill-color: #373636;
+        -webkit-text-stroke: 3px #373636;
+        cursor: not-allowed;
+    }
+}
+
+.ingredientsGroups {
+    flex: 1;
+    display: grid;
+    /* grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 10px;
+    min-height: 350px;
+    overflow-y: auto;
+}
+
+.subHeader {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selectedIngredient {
+    background-color: #555252;
+    border: 0.1px solid white;
+}
